@@ -24,6 +24,7 @@ float euler[3]={0.0f};
 int gyroZeroRate[3];                    // Calibration data.  Needed because the sensor does center at zero, but rather always reports a small amount of rotation on each axis.
 int gyroThreshold[3];                   // Raw rate change data less than the statistically derived threshold is discarded.
 
+// Probably should be using a filter instead of discarding samples
 #define  NUM_GYRO_SAMPLES  50           // As recommended in STMicro doc
 #define  GYRO_SIGMA_MULTIPLE  3         // As recommended 
 
